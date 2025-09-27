@@ -20,33 +20,35 @@ It integrates live data from trusted weather APIs to provide users with **accura
 ## 📂 Project Structure
 
 skycast/
-│── **index.html** # Homepage
-│── **style.css** # Homepage styling
-│── **index.js** # Homepage logic
-│── **dashboard.html** # Weather dashboard page
-│── **dashboard.js** # Dashboard scripts
-│── **styledash.css** # Dashboard styling
-│── **about.html** # About page
-│── **about.css** # About page styling
-│── **citynotfound.html** # Fallback page for invalid city
-│── **images/** # Icons, backgrounds, assets
+```
+│── index.html # Homepage
+│── style.css # Homepage styling
+│── index.js # Homepage logic
+│── dashboard.html # Weather dashboard page
+│── dashboard.js # Dashboard scripts
+│── styledash.css # Dashboard styling
+│── about.html # About page
+│── about.css # About page styling
+│── citynotfound.html # Fallback page for invalid city
+│── images/ # Icons, backgrounds, assets 
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-**HTML5** – Structure
-**CSS3 (Glassmorphic UI)** – Styling & animations
-**JavaScript (ES6)** – Functionality & API integration
-**Weather API** – Live data source
-**GitHub Pages** – Hosting
+- **HTML5** – Structure
+- **CSS3 (Glassmorphic UI)** – Styling & animations
+- **JavaScript (ES6)** – Functionality & API integration
+- **Weather API** – Live data source
+- **GitHub Pages** – Hosting
 
 ---
 
 ## 👩‍💻 Author
 
-SkyCast Project by **Pragati Awasthi** 
-⭐ If you like this project, don’t forget to star the repo!
+- SkyCast Project by **Pragati Awasthi** 
+- ⭐ If you like this project, don’t forget to star the repo!
 
 ---
 
