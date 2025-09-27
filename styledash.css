@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/cloudbgimg.png");
+  background-image: url("images/cloudbgimg.png");
   background-size:cover;
   background-repeat: no-repeat;
  }
