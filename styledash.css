@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Solway:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif ,'Segoe UI';
+ }
+.flex{
+  display: flex;
+  justify-content: center;
+}
+ .main{
+   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/cloudbgimg.avif");
+  background-size:cover;
+  background-repeat: no-repeat;
+ }
+.dashboard-container{
+    display: flex;
+  width: 90%;
+  max-width: 1200px;
+  gap:20px;
+  padding:15px;
+  
+}
+  .left-panel{
+    width:25vw;
+    height:90vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding:12px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    font-family: "Solway", serif ;
+    color:#222;
+  }
+  
+  .smcloud{
+    display: none;
+  }
+  #TW{
+    font-size: 1.8rem;
+  }
+  
+ .cloud {
+  position: relative;
+  opacity: 0;
+  animation: moveCloud 2s ease-out forwards;
+  animation-delay: 1.2s; /* starts after right panel appears */
+}
+
+/* Keyframes for cloud image */
+@keyframes moveCloud {
+  from { left: 0; opacity: 0; }
+  to { left: 120px; opacity: 1; }
+}
+
+  .detail{
+    position: absolute;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+  }
+.next2day{
+  position: absolute;
+  bottom:200px;
+}
+.next2day h2{
+  font-size: 1.2rem;
+}
+
+.black-line {
+  border: none;
+  height: 1px;          
+  background-color: black; 
+}
+
+  #cityName{
+    font-family: "Sorts Mill Goudy", serif;
+  }
+
+  #condition{
+ font-size: 1.5rem;
+  }
+#temperature{
+ color: #1e3a8a;
+}
+  #dateTime{
+    font-size: 1.2rem;
+  }
+  .glass{
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  }
+  .right-panel{
+      width:75vw;
+    height:90vh;
+   background-color: rgba(255, 255, 255, 0.4);
+   color:#222;
+   border-radius:25px;
+   padding:15px;
+    font-family: "Solway", serif;
+  }
+#DWD{
+  font-size: 3rem;
+}
+ #th{
+   font-size: 2rem;
+    padding-left: 32px;
+ } 
+.highlight{
+  display: flex;
+  gap:20px;
+  justify-content: space-evenly;
+}
+ .box{
+  width:20vw;
+  height:28vh;
+  border-radius: 30px;
+  padding:20px;
+  font-size: 1.2rem;
+  
+}
+ .blueglass{
+   background: linear-gradient(135deg, rgba(162,196,245,0.6), rgba(142,166,233,0.4));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+ 
+ }
+ 
+
+ .btn{
+   padding:8px 20px;
+    border-radius:25px;
+    font-size:20px;
+    border: none;
+    margin-top:10px;
+    cursor: pointer;
+ }
+   
+.btn:hover{
+    background:#7695e8;
+    transform: scale(1.08);
+ }
+
+ .day-night-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.day-night-bar .time-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Solway", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+
+  opacity: 0;                /* start hidden */
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.day-night-bar .bar {
+  flex: 1;
+  height: 6px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, 
+    #FFD580,  
+    #FFE873,  
+    #87CEEB,  
+    #FFB347,  
+    #2C3E50   
+  );
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appear one by one using delays */
+.sunrise { animation-delay: 1.6s; }
+.noon    { animation-delay: 3.2s; }
+.sunset  { animation-delay: 4.8s; }
+.night   { animation-delay: 6.4s; }
+
+
+/* Panels hidden at start */
+.left-panel, .right-panel {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Animate left panel sliding in from left */
+.left-panel {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+/* Animate right panel sliding in from right */
+.right-panel {
+  animation: slideInRight 1.2s ease-out forwards;
+  animation-delay: 0.4s; /* slight delay for stagger effect */
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+ .forecast {
+  display: flex;
+  position: absolute;
+  gap: 15px;
+}
+.forecast-card {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  color:#222;
+  text-align: center;
+  animation: slideUp 1s ease-in-out;
+}
+ 
+/* Tablet view (max-width: 1000px) */
+@media screen and (max-width: 1000px) {
+  .dashboard-container {
+    align-items: center;
+  }
+.left-panel{
+  width:50%;
+  height: auto;
+  min-height: 700px;
+}
+ .next2day{
+  position: absolute;
+  bottom:150px;
+}
+  
+#DWD,#th{
+  font-size: 1.5rem;
+}
+  .right-panel {
+    width: 50%;
+    height: auto;
+  }
+
+  .highlight {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .box {
+    width: 45%;
+    height: auto;
+    min-height: 120px;
+    font-size: 1rem;
+  }
+
+  .day-night-bar .bar {
+    width: 90%;
+    height: 5px;
+    margin: 8px 0;
+  }
+}
+
+/* Mobile view (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .main {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .left-panel{
+    height: auto;
+    min-height: 500px;
+    width:80%; 
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    
+  }
+
+  .right-panel {
+    width: 80%;
+    height: auto;
+    padding: 12px;
+  }
+
+.detail{
+    position: absolute;
+    top:60px;
+  }
+
+
+.next2day h2{
+  font-size: 1rem !important;
+}
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  #temperature {
+    font-size: 1.8rem;
+  }
+
+  #condition {
+    font-size: 1.1rem;
+  }
+
+  #DWD,#th,#TW{
+    text-align: center;
+  }
+}
+
+

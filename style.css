@@ -1,0 +1,124 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif ,'Roboto','Segoe UI';
+}
+
+.container{
+    min-height:100vh;
+    width:100%;
+    background-image: url("images/weatherbg.jpg");
+    background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+      background-color: #91b4d0;
+      position: absolute;
+}
+.tablec{
+      height:70vh;
+    width:20%;
+    border-radius: 15px;
+    margin:100px auto;
+    position: relative;
+     background-color: rgba(255, 255, 255, 0.4);
+     text-align: center;
+      display: flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: space-evenly; 
+    align-items: center;  
+    box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+.searchbox{
+    border-radius: 25px;
+    width:12vw;
+    padding:15px;
+     outline: none;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+.search{
+    padding:8px 20px;
+    border-radius:25px;
+    background: linear-gradient(180deg, #a2c4f5, #9db8f0, #8ea6e9);
+    border: none;
+       box-shadow: 0 0 10px 2px rgba(255, 255, 255, 1.5);  
+    font-weight: bold;
+    cursor: pointer;
+     transition: all 0.4s ease; 
+}
+.search:hover{
+    background:#7695e8;
+ }
+
+.tablec h3{
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2c46;
+  margin-top: -50px;
+}
+
+.about{
+    border:none;
+    padding:5px;
+    border-radius: 4px;
+    background-color: whitesmoke;
+     box-shadow: 0 2px 5px rgba(0,0,0.4,0.4);
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #dcdcdc; 
+    transition: all 0.4s ease; 
+}
+ 
+
+
+@media screen and (max-width: 1100px) {
+     .container {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .tablec {
+        width: 90%;
+        max-width: 400px;
+        margin:100px auto; 
+}
+.searchbox{
+    width:25vw;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+     .container {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .tablec {
+        width: 90%;           
+        max-width: 350px;           
+        margin: 100px auto; 
+        display: flex;  
+        gap:0px;      
+    }
+  .searchbox{
+    width:40vw;
+  }
+}
+
+

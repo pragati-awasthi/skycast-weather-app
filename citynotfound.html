@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citynotfound</title>
+    <style>
+        body{
+            background-color: rgb(229, 226, 221);
+        }
+        .container{
+            width:100%;
+            background-image: url("images/Citynotfound.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 90vh;
+        }
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+        .btn{
+   padding:8px 20px;
+    border-radius:25px;
+    font-size:20px;
+    border: none;
+    margin-top:10px;
+    cursor: pointer;
+    background:#acbff5;
+ }
+   
+.btn:hover{
+    background:#7695e8;
+    transform: scale(1.08);
+ }
+
+  @media screen and (max-width: 500px)  {
+    .container{
+        background-size:cover;
+    }
+  } 
+    </style>
+</head>
+<body>
+    <div class="container"> 
+          <div class="flex">
+          <button class="btn" onclick="goBack()">🔙 Back</button>
+        </div>
+ 
+    </div>
+    <script>
+        function goBack() {
+  window.location.href = "index.html";
+}
+    </script>
+</body>
+</html>

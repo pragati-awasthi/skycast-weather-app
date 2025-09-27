@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Weather Dashboard</title>
+  <link rel="stylesheet" href="styledash.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="dashboard-container">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel glass">
+        <h2 id="TW">Today's Weather </h2>
+        <div class="cloud"> <img src="/images/cloud.webp" height="160px" /></div>
+        <div class="detail">
+          <h2 id="cityName"></h2>
+          <h1 id="temperature"></h1>
+          <p id="condition"></p>
+          <p id="dateTime"></p>
+        </div>
+        <div class="next2day">
+          <hr class="black-line">
+          <h2>The Next 2 Days Forecast</h2>
+          <div class="forecast" id="forecast"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel glass">
+        <h2 id="DWD">Dynamic Weather Dashboard</h2>
+
+        <div class="day-night-bar">
+          <div class="time-icon">
+            <span>🌅</span>
+            <p>Sunrise</p>
+          </div>
+          <div class="bar"></div>
+          <div class="time-icon">
+            <span>☀️</span>
+            <p>Noon</p>
+          </div>
+          <div class="bar"></div>
+          <div class="time-icon">
+            <span>🌇</span>
+            <p>Sunset</p>
+          </div>
+          <div class="bar"></div>
+          <div class="time-icon">
+            <span>🌙</span>
+            <p>Night</p>
+          </div>
+        </div>
+
+        <h2 id="th">Today's Highlights</h2>
+        <div class="highlight">
+          <div class="box blueglass">
+            <p id="windDirection">Wind Direction --</p>
+            <p id="wind">Wind Speed: --</p>
+            <p id="sunrise">Sunrise: --</p>
+            <p id="sunset">Sunset: --</p>
+          </div>
+          <div class="box blueglass">
+            <p id="humidity">Humidity: --</p>
+            <p id="visibility">Visibility: --</p>
+            <p id="airQuality">Air Quality: --</p>
+          </div>
+        </div>
+        <div class="flex">
+          <button class="btn blueglass" onclick="goBack()">🔙 Back</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
